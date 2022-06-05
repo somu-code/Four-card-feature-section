@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Very-Light-Gray);
+}
+.main-container {
+  max-width: 1440px;
+  margin: 5rem auto;
+  font-family: "Poppins";
+  font-size: 15px;
+}
+.text {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading-thin,
+.heading-bold {
+  font-size: 42px;
+  color: var(--Very-Dark-Blue);
+}
+.heading-thin {
+  font-weight: 200;
+}
+.heading-bold {
+  font-weight: 600;
+}
+.paragraph {
+  margin: 0 430px;
+  margin-top: 1rem;
+  color: var(--Grayish-Blue);
+  font-size: 16px;
+}
+.card-container {
+  margin: 0 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.card {
+  background-color: white;
+  height: 250px;
+  padding: 1.6rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 15px 20px -15px var(--Grayish-Blue);
+}
+.card-image {
+  align-self: flex-end;
+}
+.card-text {
+  line-height: 1.5;
+}
+.card-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 0.5rem;
+}
+.supervisor {
+  border-top: 4px solid var(--Cyan);
+  position: relative;
+  top: 50%;
+}
+.team-builder {
+  border-top: 4px solid var(--Red);
+}
+.karma {
+  border-top: 4px solid var(--Orange);
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.calculator {
+  border-top: 4px solid var(--Blue);
+  position: relative;
+  top: 50%;
+}
+.card-paragraph {
+  font-size: 15px;
+  color: var(--Grayish-Blue);
+}
+.attribution {
+  font-size: 13px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 450px) {
+  .main-container {
+    height: auto;
+    padding: 0 10px;
+    max-width: 375px;
+  }
+  .text {
+    margin-bottom: 4rem;
+  }
+  .heading-thin,
+  .heading-bold {
+    font-size: 28px;
+  }
+  .paragraph {
+    margin: 16px 16px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    margin: 0 0;
+  }
+  .supervisor {
+    position: static;
+  }
+  .team-builder {
+  }
+  .karma {
+    grid-column: 1/2;
+  }
+  .calculator {
+    position: static;
+  }
+  .attribution {
+    margin-bottom: 2rem;
+  }
+}
